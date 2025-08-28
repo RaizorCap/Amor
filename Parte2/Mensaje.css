@@ -63,11 +63,17 @@ body {
     color: #333;
     text-align: justify;
     margin-bottom: 30px;
-    animation: slideUp 1s ease-out;
+    /* REMOVIDO: animation: slideUp 1s ease-out; */
+    min-height: 200px; /* Altura mínima para evitar colapso */
 }
 
 .message-box p {
     margin-bottom: 25px;
+}
+
+/* Clase para mostrar el mensaje box cuando esté listo */
+.message-box.visible {
+    animation: slideUp 1s ease-out;
 }
 
 .image-btn {
@@ -202,7 +208,7 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 10px;
-        font-size: 16px; /* Base font size para mejor legibilidad */
+        font-size: 16px;
     }
 
     .container {
@@ -232,7 +238,8 @@ body {
         margin-bottom: 20px;
         border-radius: 12px;
         border: 2px solid #000;
-        text-align: left; /* Mejor para lectura en móvil */
+        text-align: left;
+        min-height: 150px;
     }
 
     .message-box p {
@@ -249,13 +256,11 @@ body {
         z-index: 999;
     }
 
-    /* Mejorar interacción táctil */
     .image-btn:active {
         transform: scale(0.95);
         transition: transform 0.1s ease;
     }
 
-    /* Modal optimizado para móvil */
     .modal-content {
         margin: 8% auto;
         padding: 20px 15px;
@@ -320,6 +325,7 @@ body {
         padding: 18px 15px;
         font-size: 0.95rem;
         margin-bottom: 18px;
+        min-height: 120px;
     }
 
     .message-box p {
@@ -377,6 +383,7 @@ body {
         font-size: 0.9rem;
         line-height: 1.5;
         margin-bottom: 15px;
+        min-height: 100px;
     }
 
     .message-box p {
