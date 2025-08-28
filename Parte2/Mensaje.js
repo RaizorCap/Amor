@@ -7,6 +7,10 @@ function closeModal() {
     document.getElementById('photoModal').style.display = 'none';
 }
 
+function goToDeclaracion() {
+    window.location.href = '../Parte3/Declaracion.html';
+}
+
 // Cerrar modal al hacer clic fuera de él
 window.onclick = function (event) {
     const modal = document.getElementById('photoModal');
