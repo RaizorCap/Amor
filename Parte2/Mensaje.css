@@ -76,6 +76,23 @@ body {
     animation: slideUp 1s ease-out;
 }
 
+/* Cursor de escritura */
+.typing-cursor::after {
+    content: '|';
+    color: #ff6b9d;
+    animation: blink 1s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
 .image-btn {
     position: fixed;
     bottom: 30px;
