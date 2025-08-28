@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #000;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+}
+
+.main-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 15;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+
+    to {
+        box-shadow: 0 0 50px rgba(255, 107, 157, 0.8);
+    }
+}
+
+.message-text {
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.1em;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.continue-btn {
+    background: linear-gradient(45deg, #ff6b9d, #d63384);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 25px;
+}
+
+.continue-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Mensajes flotantes */
+.floating-message {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    color: #333;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    z-index: 5;
+    animation: floatMessage 4s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes floatMessage {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    25%,
+    75% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Posiciones para los mensajes */
+.pos-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.pos-2 {
+    top: 15%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.pos-3 {
+    top: 70%;
+    left: 5%;
+    animation-delay: 2s;
+}
+
+.pos-4 {
+    top: 75%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+.pos-5 {
+    top: 25%;
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.pos-6 {
+    top: 60%;
+    right: 20%;
+    animation-delay: 1.5s;
+}
+
+.pos-7 {
+    top: 40%;
+    left: 5%;
+    animation-delay: 2.5s;
+}
+
+.pos-8 {
+    top: 85%;
+    right: 25%;
+    animation-delay: 3.5s;
+}
+
+.pos-9 {
+    top: 5%;
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.pos-10 {
+    top: 90%;
+    left: 35%;
+    animation-delay: 4.5s;
+}
+
+/* Optimización específica para móviles - Realme 9i (412x915px) y similares */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        font-size: 16px; /* Mejora la legibilidad en móvil */
+    }
+
+    .container {
+        padding: 10px;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 15vh;
+    }
+
+    .main-photo {
+        width: 220px;
+        height: 220px;
+        border: 6px solid #fff;
+        margin-bottom: 20px;
+    }
+
+    .message-text {
+        max-width: 90vw;
+        width: 100%;
+        padding: 20px 18px;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 15px 0;
+        border-radius: 12px;
+    }
+
+    .continue-btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+        margin-top: 20px;
+        min-width: 140px;
+        border-radius: 20px;
+    }
+
+    .continue-btn:active {
+        transform: translateY(0);
+        transition: all 0.1s ease;
+    }
+
+    /* Optimización de mensajes flotantes para móvil */
+    .floating-message {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        border-radius: 20px;
+        max-width: 180px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    /* Reposicionamiento de mensajes para pantallas móviles */
+    .pos-1 {
+        top: 8%;
+        left: 5%;
+    }
+
+    .pos-2 {
+        top: 12%;
+        right: 5%;
+    }
+
+    .pos-3 {
+        top: 75%;
+        left: 3%;
+    }
+
+    .pos-4 {
+        top: 80%;
+        right: 3%;
+    }
+
+    .pos-5 {
+        top: 20%;
+        left: 10%;
+    }
+
+    .pos-6 {
+        top: 65%;
+        right: 8%;
+    }
+
+    .pos-7 {
+        top: 35%;
+        left: 2%;
+    }
+
+    .pos-8 {
+        top: 88%;
+        right: 15%;
+    }
+
+    .pos-9 {
+        top: 4%;
+        left: 30%;
+    }
+
+    .pos-10 {
+        top: 92%;
+        left: 25%;
+    }
+}
+
+/* Optimización adicional para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .container {
+        padding-top: 12vh;
+    }
+
+    .main-photo {
+        width: 200px;
+        height: 200px;
+        border: 5px solid #fff;
+    }
+
+    .message-text {
+        padding: 18px 15px;
+        font-size: 0.95rem;
+        margin: 12px 0;
+    }
+
+    .continue-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .floating-message {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+        max-width: 160px;
+    }
+}
+
+/* Optimización para orientación horizontal en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        flex-direction: row;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .main-photo {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 0;
+    }
+
+    .message-text {
+        margin-top: 0;
+        max-width: 50vw;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .continue-btn {
+        margin-top: 15px;
+        padding: 8px 18px;
+        font-size: 0.9rem;
+    }
+
+    /* Ocultar algunos mensajes flotantes en landscape */
+    .pos-3, .pos-4, .pos-8, .pos-10 {
+        display: none;
+    }
+}

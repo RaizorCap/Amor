@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas del Corazón - Para Anahí</title>
+    <link rel="icon" type="image/x-icon" href="../img/corazon.png">
+</head>
+
+<body>
+    <!-- Corazones de fondo -->
+    <div id="hearts-background"></div>
+
+    <div class="container">
+        <h1 class="title">💕 Preguntas del Corazón 💕</h1>
+        <p class="subtitle">Responde con sinceridad, querida Anahí</p>
+
+        <div class="question-container" id="questionContainer">
+            <div class="question" id="currentQuestion">¿Te gusta recibir sorpresas?</div>
+
+            <div class="buttons-container" id="buttonsContainer">
+                <button class="answer-btn yes-btn" onclick="nextQuestion(true)">Sí 💖</button>
+                <button class="answer-btn no-btn" onclick="nextQuestion(false)">No 💔</button>
+            </div>
+
+            <div class="disclaimer" id="disclaimer">
+                Tranquila, esto es solo interactivo, no podré ver las respuestas 😊
+            </div>
+        </div>
+    </div>
+    <script src="Declaracion.js"></script>
+
+</body>
+
+</html>

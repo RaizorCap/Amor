@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Anahí - Con amor</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="img/corazon.png">
+</head>
+<body>
+    <!-- Corazones flotantes -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <div class="container">
+        <div class="welcome-text">
+            <h1>💕 Para mi querida Anahí 💕</h1>
+            <p>Una persona especial merece algo especial...</p>
+            <p>Alguien que ama a los animales tanto como tú, merece todo el amor del mundo</p>
+        </div>
+
+        <!-- Imagen del Chow Chow -->
+        <img src="https://images.unsplash.com/photo-1605568427561-40dd23c2acea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Chow Chow" class="chow-chow-img">
+
+        <button class="open-letter-btn" onclick="openLetter()">
+            💌 Abrir Carta de Amor 💌
+        </button>
+    </div>
+
+    <!-- Carta flotante -->
+    <div class="letter-overlay" id="letterOverlay">
+        <div class="letter" id="letter">
+            <h2>De parte de: Rubén</h2>
+            <img src="img/Roly.jpg" alt="Rubén" class="letter-img">
+            <p>
+                Hola Querida.<br><br>
+                Desde hace tiempo he aceptado que no seremos mas que conocidos que se quieren y la distancia es nuestro mayor obstáculo, aun así he intentado lo que pude por mantenerme lo mas cercano posible.<br><br>
+                Sin mas vacilación espero te guste.
+            </p>
+            <button class="continue-btn" onclick="goToDestellos()">Continuar</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
